@@ -1,6 +1,17 @@
 def evaluar(numero1, numero2, numero3, numero4):
     # TODO: Coloca aquí el código del ejercicio 5: Ordenamiento
-    return "";
+    numeros = [numero1, numero2, numero3, numero4]
+    n = len(numeros)
+    intercambio = True
+ 
+    while intercambio:
+        intercambio = False
+        for i in range(n - 1):
+            if numeros[i] > numeros[i + 1]:
+                numeros[i], numeros[i + 1] = numeros[i + 1], numeros[i]
+                intercambio = True
+    respuesta = ' '.join(map(str, numeros))
+    return respuesta
 
 if __name__ == '__main__':
     print("Número 1:", end="")
